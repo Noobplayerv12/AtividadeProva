@@ -37,13 +37,13 @@ botao.addEventListener('click', async () => {
                         data[0].res[index].periodo = data[0].res[index].periodo.replace(',' , " a ")
                         data[0].res[index].periodo = "de "+ data[0].res[index].periodo
                     }
-                
                     if(index < 5){
                         let li = document.createElement('li')
                         li.classList.add('list-group-item')
                         li.classList.add('mt-2')
                         li.style.borderRadius = '10px'
                         li.style.borderColor = 'gray'
+                        li.style.fontWeight = 'bold'
                         li.innerText = `${data[0].res[index].periodo}: ${data[0].res[index].frequencia} registros`
                         uls.appendChild(li)
                     } else {
@@ -72,6 +72,7 @@ carregarMais.addEventListener('click', () => {
         li.classList.add('mt-2')
         li.style.borderRadius = '10px'
         li.style.borderColor = 'gray'
+        li.style.fontWeight = 'bold'
         li.innerText = `${item.periodo} : ${item.frequencia} registros`
         uls.appendChild(li)
     })

@@ -9,7 +9,7 @@ const url = 'https://servicodados.ibge.gov.br/api/v2/censos/nomes/'
 const carregarMais =document.querySelector('.carregarMais')
 
 botao.addEventListener('click', async () => {
-    if(nome.value !== ""){
+    if(nome.value.trim() !== ""){
         let urlNome = url + nome.value
         nome.value = ""
         await fetch(`${urlNome}`).then((res) => {
